@@ -15,8 +15,8 @@ export const leadership = [
   {
     id: 'esther',
     name: 'Akinwande Esther',
-    role: 'Financial Adviser & Secretary, Lagos Chapter',
-    focus: 'Finance and chapter administration',
+    role: 'National Financial Adviser & Auditor',
+    focus: 'Finance, audit and accountability',
     photo: 'team-esther',
     position: '50% 25%',
     bio: [
@@ -62,8 +62,8 @@ export const leadership = [
   {
     id: 'aro',
     name: 'Aro Joshua',
-    role: 'Executive Member',
-    focus: 'Leadership development and education',
+    role: 'Head of Administration',
+    focus: 'Administration and leadership development',
     photo: 'team-aro',
     position: '50% 25%',
     bio: [
