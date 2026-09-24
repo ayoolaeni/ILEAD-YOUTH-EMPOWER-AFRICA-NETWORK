@@ -4,6 +4,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createRequire } from 'node:module';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = path.join(ROOT, 'frontend', 'dist');
@@ -15,7 +16,9 @@ if (!fs.existsSync(path.join(DIST, 'index.html'))) {
   process.exit(1);
 }
 
-fs.rmSync(path.join(ROOT, 'deploy'), { recursive: true, force: true });
+// Clear only what we regenerate (the folder itself may be open in File Explorer).
+fs.rmSync(OUT, { recursive: true, force: true });
+fs.rmSync(path.join(ROOT, 'deploy', 'ilead-site.zip'), { force: true });
 fs.mkdirSync(OUT, { recursive: true });
 fs.cpSync(DIST, OUT, { recursive: true });
 
@@ -44,4 +47,13 @@ const mb = (dir) => {
   return (total / 1024 / 1024).toFixed(1);
 };
 console.log(`Ready: deploy/public_html  (${count(OUT)} files, ${mb(OUT)} MB)`);
-console.log('Upload the CONTENTS of that folder into public_html on Whogohost.');
+
+// One-file version for cPanel's File Manager (Upload, then Extract).
+const AdmZip = createRequire(path.join(ROOT, 'frontend', 'package.json'))('adm-zip');
+const zip = new AdmZip();
+zip.addLocalFolder(OUT);
+const zipPath = path.join(ROOT, 'deploy', 'ilead-site.zip');
+zip.writeZip(zipPath);
+const check = new AdmZip(zipPath).getEntries().length;
+console.log(`Zip ready: deploy/ilead-site.zip  (${(fs.statSync(zipPath).size / 1024 / 1024).toFixed(1)} MB, ${check} entries)`);
+console.log('Upload that zip to public_html on Whogohost, then Extract it.');
