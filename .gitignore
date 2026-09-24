@@ -1,0 +1,9 @@
+node_modules/
+frontend/dist/
+deploy/
+backend/api/storage/
+backend/api/config.local.php
+update/
+legacy-site/
+*.log
+.DS_Store
