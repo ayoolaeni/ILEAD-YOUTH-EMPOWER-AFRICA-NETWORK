@@ -13,6 +13,18 @@ export const leadership = [
     ],
   },
   {
+    id: 'aboh',
+    name: 'Aboh Vincent',
+    role: 'Vice President',
+    focus: 'Leadership, governance and delivery',
+    photo: 'team-aboh',
+    position: '50% 15%',
+    bio: [
+      'Aboh Vincent is the Vice President of the iLead Youth Empower Africa Network, a member of its executive team and one of the organisation’s authorised signatories. He works closely with the President and Executive Director to keep the network’s leadership, programmes and day-to-day operations moving forward.',
+      'Committed to the growth of young people across Africa, Vincent supports the organisation’s outreaches and helps ensure that every initiative is delivered with integrity, accountability and impact for the communities we serve.',
+    ],
+  },
+  {
     id: 'esther',
     name: 'Akinwande Esther',
     role: 'National Financial Adviser & Auditor',

@@ -24,6 +24,7 @@ const WA = 'WhatsApp Image 2026-09-23 at ';
 const IMAGES = {
   // Leadership portraits
   'team-okolo': [path.join(UPDATE, 'WhatsApp Image 2026-08-31 at 17.04.06.jpeg'), [480, 900]],
+  'team-aboh': [path.join(UPDATE, 'Vincentt.jpg'), [480, 900]],
   'team-esther': [path.join(LEGACY, 'akinwande-esther.jpg'), [480, 900], { left: 300, top: 170, width: 540, height: 700 }],
   'team-glory': [path.join(UPDATE, 'Glory Kayode.jpeg'), [480, 900]],
   'team-david': [path.join(LEGACY, 'david-anyebe.jpg'), [480, 900]],
