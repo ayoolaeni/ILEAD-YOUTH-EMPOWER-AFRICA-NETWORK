@@ -59,7 +59,6 @@ const IMAGES = {
 
   // Section imagery
   'about-classroom': [path.join(LEGACY, 'student-in-school.jpeg'), [640, 1280, 1920]],
-  'youth-power': [path.join(LEGACY, 'youth-power.jpg'), [640, 1024]],
   'health': [path.join(LEGACY, 'health1.jpeg'), [640, 1080]],
   'specific': [path.join(LEGACY, 'specificpic.jpg'), [720]],
 };
