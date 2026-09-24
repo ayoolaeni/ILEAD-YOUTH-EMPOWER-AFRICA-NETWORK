@@ -16,12 +16,12 @@ export const leadership = [
     id: 'aboh',
     name: 'Aboh Vincent',
     role: 'Vice President',
-    focus: 'Leadership, governance and delivery',
+    focus: 'Leadership, youth and education',
     photo: 'team-aboh',
     position: '50% 15%',
     bio: [
-      'Aboh Vincent is the Vice President of the iLead Youth Empower Africa Network, a member of its executive team and one of the organisation’s authorised signatories. He works closely with the President and Executive Director to keep the network’s leadership, programmes and day-to-day operations moving forward.',
-      'Committed to the growth of young people across Africa, Vincent supports the organisation’s outreaches and helps ensure that every initiative is delivered with integrity, accountability and impact for the communities we serve.',
+      'Aboh Vincent is a graduate of Political Science from Kogi State University, where he obtained his Bachelor’s degree. He has gained valuable professional experience through his work with various organisations and companies, developing strong skills in leadership, communication, teamwork and community engagement. Throughout his career, Vincent has demonstrated a commitment to personal development, professionalism, and contributing positively to the organisations and communities he has been part of.',
+      'Beyond his professional career, Aboh Vincent is passionate about youth and children development, particularly in the area of education. He has contributed to initiatives that encourage young people and children to pursue education and develop their potential. Through his involvement in youth-focused activities and community development, he continues to support and inspire younger generations to acquire knowledge, build meaningful careers, and become responsible contributors to society. His passion for service, leadership and human development remains an important part of his personal and professional journey.',
     ],
   },
   {
