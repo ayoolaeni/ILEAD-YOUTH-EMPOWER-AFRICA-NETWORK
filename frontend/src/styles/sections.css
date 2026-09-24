@@ -143,8 +143,12 @@
 .modal__close:hover { background: var(--orange); }
 .modal__close svg { width: 20px; height: 20px; }
 @media (max-width: 720px) {
-  .modal__panel { grid-template-columns: 1fr; }
-  .modal__photo { aspect-ratio: 4 / 3.4; min-height: 0; }
+  /* Stack photo above text and scroll the whole card; a grid here squeezed the text behind the photo. */
+  .modal { padding: 12px; }
+  .modal__panel { display: block; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+  .modal__photo { aspect-ratio: 4 / 3.4; min-height: 0; width: 100%; }
+  .modal__close { position: sticky; top: 10px; display: grid; margin: 10px 10px -54px auto; }
+  .modal__body { padding: 24px 22px 32px; }
 }
 @keyframes fade { from { opacity: 0; } }
 @keyframes rise { from { opacity: 0; transform: translateY(24px) scale(0.98); } }

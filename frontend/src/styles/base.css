@@ -164,9 +164,9 @@ em.accent { font-style: italic; color: var(--orange-text); font-variation-settin
     transform: translateY(-8px); opacity: 0; visibility: hidden; transition: opacity 0.25s, transform 0.25s var(--ease), visibility 0.25s;
   }
   .nav.is-open { opacity: 1; transform: none; visibility: visible; }
-  .nav__link { font-family: var(--font-display); font-size: 1.7rem; padding: 14px 4px; border-bottom: 1px solid var(--line); border-radius: 0; }
+  .nav__link { font-size: 1.1rem; font-weight: 600; padding: 15px 4px; border-bottom: 1px solid var(--line); border-radius: 0; }
   .nav__link.is-active::after { display: none; }
-  .nav .btn { margin: 20px 0 0; padding: 18px; font-size: 1.05rem; }
+  .nav .btn { margin: 20px 0 0; padding: 15px; font-size: 1rem; }
 }
 
 /* ---------- Footer ---------- */
