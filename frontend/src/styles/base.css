@@ -51,7 +51,7 @@ body {
 }
 img, video, svg { display: block; max-width: 100%; }
 img { height: auto; }
-a { color: inherit; text-decoration: none; }
+a { color: inherit; text-decoration: none; overflow-wrap: anywhere; }
 p { margin: 0 0 1em; }
 ul { margin: 0; padding: 0; list-style: none; }
 h1, h2, h3, h4 { text-wrap: balance; margin: 0; color: var(--ink); font-family: var(--font-display); font-weight: 600; line-height: 1.12; letter-spacing: -0.015em; }
@@ -173,9 +173,9 @@ em.accent { font-style: italic; color: var(--orange-text); font-variation-settin
 .footer { background: var(--ink); color: rgba(255, 255, 255, 0.74); font-size: 0.98rem; }
 .footer a { transition: color 0.2s; }
 .footer a:hover { color: var(--orange); }
-.footer__top { padding-block: clamp(56px, 7vw, 88px) 48px; display: grid; gap: 48px 40px; grid-template-columns: 1.4fr 0.8fr 1fr 1.3fr; }
-@media (max-width: 1020px) { .footer__top { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 560px) { .footer__top { grid-template-columns: 1fr; } }
+.footer__top { padding-block: clamp(56px, 7vw, 88px) 48px; display: grid; gap: 48px 40px; grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr) minmax(0, 1.1fr) minmax(0, 1.3fr); }
+@media (max-width: 1180px) { .footer__top { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .footer__top { grid-template-columns: minmax(0, 1fr); } }
 .footer h3 { color: #fff; font-family: var(--font-body); font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; margin-bottom: 18px; }
 .footer__brand { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
 .footer__brand img { width: 56px; height: 56px; border-radius: 50%; background: #fff; }
@@ -198,3 +198,7 @@ em.accent { font-style: italic; color: var(--orange-text); font-variation-settin
 .newsletter .msg.ok { color: #8fe08a; }
 .newsletter .msg.err { color: #ffb4b4; }
 .hp { position: absolute !important; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+@media (max-width: 420px) {
+  .btn { white-space: normal; text-align: center; line-height: 1.25; }
+}
